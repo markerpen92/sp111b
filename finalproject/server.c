@@ -28,13 +28,13 @@ int get_int(char* str, int start){
 
 int main(int argc, char const *argv[])
 {
---  int server_fd, new_socket, valread;
+    int server_fd, new_socket, valread;
     struct sockaddr_in address;
     int opt = 1;
     int addrlen = sizeof(address);
     char buffer[1024] = {0};
---  char *hello = "Hello\n";
---  char *del;
+    char *hello = "Hello\n";
+    char *del;
   
     // Creating socket file descriptor
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0)
@@ -109,7 +109,7 @@ int main(int argc, char const *argv[])
             else
             {
                 buffer[0] = '\0';
-                sprintf(buffer , "%s" , "Hello");
+                sprintf(buffer , "%s" , "Wrong Cmd");
             }
         }
         send(new_socket , buffer , sizeof(buffer) , 0);

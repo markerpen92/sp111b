@@ -8,8 +8,8 @@
 int main(int argc, char const *argv[])
 {
 	int sock = 0, valread;
-	struct sockaddr_in serv_addr;
-	char *hello = "Hello from client";
+	struct sockaddr_in serv_addr;  // sin_family-IPV4 or IPV6 & sin_port & sin_addr & sin_zero
+	char *hello = "Hello from client"; 
 	char buffer[1024] = {0};
 
     usleep(500000);
