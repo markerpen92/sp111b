@@ -38,7 +38,6 @@ int main(int argc, char const *argv[])
 
     while(1)
     {
-        // write your code!
         //	printf("Input : ");
         fgets(buffer , sizeof(buffer)-1 , stdin);
         if(buffer == NULL) continue;
